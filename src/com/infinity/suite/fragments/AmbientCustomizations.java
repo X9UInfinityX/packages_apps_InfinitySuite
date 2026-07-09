@@ -144,6 +144,10 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
                 Settings.Secure.DOZE_BRIGHTNESS, 35, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.DOZE_ON_CHARGE, 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                "aod_low_brightness", 8, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                "aod_high_brightness", 60, UserHandle.USER_CURRENT);
         EdgeLightSettings.Companion.reset(mContext);
     }
 
